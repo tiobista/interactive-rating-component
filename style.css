@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--veryDarkBlue);
+  color: var(--lightGrey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  background-color: var(--darkBlue);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 415px;
+}
+.rate .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: hsl(204, 23%, 21%);
+  position: relative;
+}
+.rate img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thankyou img {
+  margin: 1rem 0;
+}
+h1,
+h2 {
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+main ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+button {
+  cursor: pointer;
+}
+li .btn {
+  background-color: hsl(204, 23%, 21%);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+}
+
+li .btn:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+li .btn:focus {
+  background-color: var(--lightGrey);
+}
+.btn-submit {
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 10px 7px;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.btn-submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p.grey {
+  width: 100%;
+  text-align: center;
+  background-color: hsl(216, 16%, 25%);
+  padding: 10px 1rem;
+  color: var(--orange);
+  border-radius: 20px;
+}
+
+.hidden {
+  display: none;
+}
+@media (max-width: 500px) {
+  main {
+    width: 90%;
+  }
+  .rate .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    width: 80%;
+  }
+  .rate .btn {
+    width: 30px;
+    height: 30px;
+  }
+}
